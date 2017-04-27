@@ -1,3 +1,11 @@
+# This is my sandbox for learning angular and redux.
+
+Nothing special for now..
+
+
+
+______________ Original Angular-cli Readme __________________________
+
 # Ang
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
