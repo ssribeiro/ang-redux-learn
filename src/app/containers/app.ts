@@ -11,8 +11,22 @@ import { Store } from '@ngrx/store';
   selector: 'bc-app',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <router-outlet></router-outlet>
-  `
+    <div #presenter>
+      <router-outlet></router-outlet>
+    </div>
+  `,
+  styles: [`
+    div {
+      background-color: white;
+      position: fixed;
+      left: 20%;
+      top:20%;
+      max-width: 60%;
+      max-height: 60%;
+      border-style: solid;
+      border-color: green;
+    }
+  `]
   /*`
     <bc-layout>
       <bc-sidenav [open]="showSidenav$ | async">

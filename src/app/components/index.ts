@@ -5,12 +5,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { OiComponent } from './oi';
+import { InputGreatComponent } from './input-great';
 
 import { PipesModule } from '../pipes';
 
 export const COMPONENTS:Array<any> = [
   //ToolbarComponent,
   OiComponent,
+  InputGreatComponent
 ];
 
 

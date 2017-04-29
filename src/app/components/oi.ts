@@ -6,16 +6,8 @@ import { Greet } from '../models/greet';
 @Component({
   selector: 'bc-oi',
   template: `
-    <span>
-      {{ hi }}
-    </span>
-  `,
-  styles: [`
-    span {
-      background-color: black;
-      color: white;
-    }
-  `]
+    <of-input-great></of-input-great>
+  `
 })
 export class OiComponent {
   @Input() greet: Greet;

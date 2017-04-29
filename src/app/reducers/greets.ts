@@ -18,7 +18,7 @@ export interface State {
 
 export const initialState: State = {
   ids: ['1'],
-  entities: {'1':{hi:'oi'}},
+  entities: {'1':{hi:'olá mundoi'}},
   defaultGreetId: '1',
 };
 
