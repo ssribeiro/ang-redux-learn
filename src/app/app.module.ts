@@ -18,6 +18,7 @@ import { GreetEffects } from './effects/greet';
 
 import { AppComponent } from './containers/app';
 import { OiPageComponent } from './containers/oi-page';
+import { InputAddressPageComponent } from './containers/input-address-page';
 //import { NotFoundPageComponent } from './containers/not-found-page';
 
 import { routes } from './routes';
@@ -27,7 +28,8 @@ import { reducer } from './reducers';
 @NgModule({
   declarations: [
     AppComponent,
-    OiPageComponent
+    OiPageComponent,
+    InputAddressPageComponent
   ],
   imports: [
     BrowserAnimationsModule,

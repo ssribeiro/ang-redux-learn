@@ -4,9 +4,9 @@ import { Greet } from '../models/greet';
 
 
 @Component({
-  selector: 'bc-oi',
+  selector: 'of-oi',
   template: `
-    <of-input-great></of-input-great>
+    oi
   `
 })
 export class OiComponent {
