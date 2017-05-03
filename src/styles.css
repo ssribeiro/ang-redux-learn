@@ -1,6 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+/*{{FONTS}}*/
+@import '~https://fonts.googleapis.com/css?family=Fjalla+One';
+@import '~https://fonts.googleapis.com/css?family=Roboto';
+@font-face { 
+	font-family:"Roboto Black"; 
+	src:url("assets/fonts/Roboto-Black/Roboto-Black.eot?") format("eot"), 
+	url("assets/fonts/Roboto-Black/Roboto-Black.woff") format("woff"), 
+	url("assets/fonts/Roboto-Black/Roboto-Black.ttf") format("truetype"), 
+	url("assets/fonts/Roboto-Black/Roboto-Black.svg#Roboto-Black") 
+	format("svg"); 
+	font-weight:normal; 
+	font-style:normal; 
+}
+.fjala-font { font-family: 'Fjalla One', sans-serif; }
+.roboto-font { font-family: 'Roboto', sans-serif; }
+roboto-black { 
+	white-space: initial;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  word-wrap: break-word;
+  font-family: 'Roboto Black';
+  font-weight: 200 !important;
+  letter-spacing: 1px !important;
+  line-height: 36px !important;
+  font-size: inherit !important;
+}
+
+																																/* GENERAL 
+																																body { 
+																																	background-color: #f5f5f5 !important; 
+																																	color: #525252 !important; 
+																																	font-family: 'Roboto', sans-serif; 
+																																	font-weight: 400; 
+																																	letter-spacing: 1px !important; 
+																																	line-height: 140%;
+																																}*/
 
 body {
   background-color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+a { 
+	cursor: pointer; 
+}
+
+button {
+  border: none;
+  display: inline-block;
+  outline: 0;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+ul.of-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.of-bk-lightgrey {
+	background-color: #EEEEEE;
+}
+
+.hidden {
+  visibility: hidden;
 }

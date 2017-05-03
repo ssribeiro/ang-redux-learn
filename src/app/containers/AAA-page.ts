@@ -8,21 +8,15 @@ import * as fromRoot from '../reducers';
 
 
 @Component({
-  selector: 'bc-oi-page',
+  selector: 'of-AAA-page',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <of-input-address-page></of-input-address-page>
-  `
-  /*`
-    <bc-oi
-      [book]="book$ | async"
-      [inCollection]="isSelectedBookInCollection$ | async"
-      (add)="addToCollection($event)"
-      (remove)="removeFromCollection($event)">
-    </bc-oi>
-  `*/
+    <of-newplaces-page></of-newplaces-page>
+  `,
+  styles: [`
+  `]
 })
-export class OiPageComponent {
+export class AAAPageComponent {
   //greet$: Observable<Greet>;
 
   constructor(private store: Store<fromRoot.State>) {

@@ -1,13 +1,13 @@
 import { Routes } from '@angular/router';
 
 //import { BookExistsGuard } from './guards/book-exists';
-import { OiPageComponent } from './containers/oi-page';
+import { AAAPageComponent } from './containers/AAA-page';
 //import { NotFoundPageComponent } from './containers/not-found-page';
 
 export const routes: Routes = [
   {
     path: '',
-    component: OiPageComponent
+    component: AAAPageComponent
   },
   /*{
     path: 'book/find',

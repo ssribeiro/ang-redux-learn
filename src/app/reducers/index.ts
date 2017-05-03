@@ -37,11 +37,9 @@ import { combineReducers } from '@ngrx/store';
  * the state of the reducer plus any selector functions. The `* as`
  * notation packages up all of the exports into a single object.
  */
-//import * as fromSearch from './search';
-//import * as fromCollection from './collection';
-//import * as fromLayout from './layout';
-//import * as fromBooks from './books';
 import * as fromGreets from './greets';
+import * as fromPlaces from './places';
+import * as fromSearchPlaces from './search-places';
 
 
 /**
@@ -49,11 +47,9 @@ import * as fromGreets from './greets';
  * our top level state interface is just a map of keys to inner state types.
  */
 export interface State {
-  //search: fromSearch.State;
-  //books: fromBooks.State;
   greets: fromGreets.State;
-  //collection: fromCollection.State;
-  //layout: fromLayout.State;
+  places: fromPlaces.State;
+  search_places: fromSearchPlaces.State;
   router: fromRouter.RouterState;
 }
 
@@ -66,11 +62,9 @@ export interface State {
  * the result from right to left.
  */
 const reducers = {
-  //search: fromSearch.reducer,
-  //books: fromBooks.reducer,
   greets: fromGreets.reducer,
-  //collection: fromCollection.reducer,
-  //layout: fromLayout.reducer,
+  places: fromPlaces.reducer,
+  search_places: fromSearchPlaces.reducer,
   router: fromRouter.routerReducer,
 };
 
@@ -103,6 +97,8 @@ export function reducer(state: any, action: any) {
  */
 //export const getBooksState = (state: State) => state.books;
 export const getGreetsState = (state: State) => state.greets;
+export const getPlacesState = (state: State) => state.places;
+export const getSearchPlacesState = (state: State) => state.search_places;
 
 /**
  * Every reducer module exports selector functions, however child reducers
@@ -114,51 +110,8 @@ export const getGreetsState = (state: State) => state.greets;
  * The created selectors can also be composed together to select different
  * pieces of state.
  */
- //export const getBookEntities = createSelector(getBooksState, fromBooks.getEntities);
- //export const getBookIds = createSelector(getBooksState, fromBooks.getIds);
- //export const getSelectedBookId = createSelector(getBooksState, fromBooks.getSelectedId);
- //export const getSelectedBook = createSelector(getBooksState, fromBooks.getSelected);
  export const getDefaultGreet = createSelector(getGreetsState, fromGreets.getDefault);
+ export const getPlaces = createSelector(getPlacesState, fromPlaces.getPlaces);
+ export const getEditingPlace = createSelector(getPlacesState, fromPlaces.getEditing);
 
-
-/**
- * Just like with the books selectors, we also have to compose the search
- * reducer's and collection reducer's selectors.
- */
-//export const getSearchState = (state: State) => state.search;
-
-//export const getSearchBookIds = createSelector(getSearchState, fromSearch.getIds);
-//export const getSearchQuery = createSelector(getSearchState, fromSearch.getQuery);
-//export const getSearchLoading = createSelector(getSearchState, fromSearch.getLoading);
-
-
-/**
- * Some selector functions create joins across parts of state. This selector
- * composes the search result IDs to return an array of books in the store.
- */
-//export const getSearchResults = createSelector(getBookEntities, getSearchBookIds, (books, searchIds) => {
-  //return searchIds.map(id => books[id]);
-//});
-
-
-
-//export const getCollectionState = (state: State) => state.collection;
-
-//export const getCollectionLoaded = createSelector(getCollectionState, fromCollection.getLoaded);
-//export const getCollectionLoading = createSelector(getCollectionState, fromCollection.getLoading);
-//export const getCollectionBookIds = createSelector(getCollectionState, fromCollection.getIds);
-
-//export const getBookCollection = createSelector(getBookEntities, getCollectionBookIds, (entities, ids) => {
-  //return ids.map(id => entities[id]);
-//});
-
-//export const isSelectedBookInCollection = createSelector(getCollectionBookIds, getSelectedBookId, (ids, selected) => {
-  //return ids.indexOf(selected) > -1;
-//});
-
-/**
- * Layout Reducers
- */
-//export const getLayoutState = (state: State) => state.layout;
-
-//export const getShowSidenav = createSelector(getLayoutState, fromLayout.getShowSidenav);
+ export const getSearchPlacesResults = createSelector(getSearchPlacesState, fromSearchPlaces.getSearchResults);
